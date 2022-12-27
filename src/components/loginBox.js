@@ -24,7 +24,7 @@ export default function LoginBox() {
             </label>
             <input
               type="email"
-              className=" block w-full px-4 py-2 mt-2 text-originalColor bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className=" block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               required/>
           </div>
           <div className="mb-2">
@@ -36,7 +36,7 @@ export default function LoginBox() {
             </label>
             <input
               type="password"
-              className="block w-full px-4 py-2 mt-2 text-originalColor bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               required/>
           </div>
           <a href="#" className="text-xs text-originalColor hover:underline">
