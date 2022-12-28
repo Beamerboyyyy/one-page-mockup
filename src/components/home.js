@@ -9,7 +9,7 @@ export default function About() {
     { text: "Phone", count: "+1 416-875-4747" },
   ];
   return (
-    <section id="home" className="py-10 text-white mt-2">
+    <section id="home" className="py-10 text-white mt-2  ">
       <div className="text-center mt-8">
         <h3 className="text-4xl font-semibold border-t-2 border-white pt-2">
           Home

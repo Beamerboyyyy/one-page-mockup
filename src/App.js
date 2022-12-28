@@ -11,7 +11,7 @@ import Workflowoptimizer from './components/workflowOptimizer';
 
 function App() {
   return (
-    <div className="App overflow-hidden">
+    <div className="App overflow-hidden ">
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage/>} />
