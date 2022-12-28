@@ -7,18 +7,20 @@ import { useEffect } from "react";
 import "../static/workshopFloor.css";
 
 export default function WorkshopFloor() {
+  const timeSteps = [1500, 1000, 3000, 1500, 3000];
   useEffect(() => {
     const text = "Car Model: Likely Ford F-150";
     async function beginPage() {
       var elements = document.getElementsByClassName("custom");
       for (let index = 0; index < elements.length; index++) {
         const element = elements[index];
-        element.getElementsByTagName("div")[0].innerHTML =
-          '<div class="lds-ring hideMeAfter5Seconds ml-1 -mt-0.5"><div></div><div></div><div></div><div></div></div><span class="ml-1 showMe text-xl font-black">&#10003;</span>';
+        element.getElementsByTagName(
+          "div"
+        )[0].innerHTML = `<div class="lds-ring${timeSteps[index]} hideMe${timeSteps[index]} ml-1 -mt-0.5"><div></div><div></div><div></div><div></div></div><span class="ml-1 showMe${timeSteps[index]} text-xl font-black">&#10003;</span>`;
         element
           .getElementsByTagName("span")[0]
           .classList.add("text-2xl", "font-black");
-        await new Promise((r) => setTimeout(r, 12000));
+        await new Promise((r) => setTimeout(r, timeSteps[index]));
         if (index == 0) {
           document.getElementsByClassName("custom-text")[0].textContent = text;
         }

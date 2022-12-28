@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../static/image.jpg";
 import GaugeChart from "react-gauge-chart";
+import { LineChartv2 } from "./lineChartv2";
 
 export default function InformationBox() {
   return (
@@ -23,6 +24,7 @@ export default function InformationBox() {
                 <div class="w-1/5 h-1/4 mt-1 flex-row justify-center items-center">
                   <div className="justify-center items-center text-center text-gray-800 font-semibold text-sm flex flex-col">
                     <GaugeChart
+                      className="flex items-center justify-center"
                       colors={["#4B5563"]}
                       percent={0.87}
                       nrOfLevels={1}
@@ -49,30 +51,33 @@ export default function InformationBox() {
                 </div>
                 <div class="w-full h-fit text-center items-center justify-center flex">
                   <div class="flex flex-wrap justify-center py-4 lg:pt-4 pt-8 w-11/12">
-                    <div class="mr-4 p-3 text-center">
-                      <span class="text-xl font-bold block e tracking-wide text-blueGray-600">
-                        ML Engineer
+                  <div class="mr-4 p-3 text-center">
+                      <span class="text-xl font-bold block e tracking-wide text-gray-600">
+                        Senior Technician
                       </span>
-                      <span class="text-sm text-blueGray-400">Designation</span>
+                      <span class="text-sm text-gray-400">Designation</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
-                      <span class="text-xl font-bold block  tracking-wide text-blueGray-600">
-                        Technical
+                      <span class="text-xl font-bold block  tracking-wide text-gray-600">
+                      579
                       </span>
-                      <span class="text-sm text-blueGray-400">Domain</span>
+                      <span class="text-sm text-gray-400">Jobs In 2022</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
-                      <span class="text-xl font-bold block  tracking-wide text-blueGray-600">
-                        $5000
+                      <span class="text-xl font-bold block  tracking-wide text-gray-600">
+                        Ford-F1 50
                       </span>
-                      <span class="text-sm text-blueGray-400">Salary</span>
+                      <span class="text-sm text-gray-400">Best Performance Model</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
-                      <span class="text-xl font-bold block  tracking-wide text-blueGray-600">
-                        Remote
+                      <span class="text-xl font-bold block  tracking-wide text-gray-600">
+                        95%
                       </span>
-                      <span class="text-sm text-blueGray-400">Job Type</span>
+                      <span class="text-sm text-gray-400">Score for Current Job</span>
                     </div>
+                    {/* <div className=" h-fit">
+                      <LineChartv2/>
+                    </div> */}
                     
                   </div>
                 </div>

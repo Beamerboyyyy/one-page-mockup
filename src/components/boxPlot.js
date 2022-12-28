@@ -30,6 +30,8 @@ const ApexChart = (props) => {
     },
   ]);
   const [options, setOptions] = useState({
+
+    
     chart: {
       type: "boxPlot",
       height: 350,
@@ -52,6 +54,7 @@ const ApexChart = (props) => {
     },
   });
   return (
+    <>
     <div id="chart">
       <ReactApexChart
         options={options}
@@ -60,6 +63,8 @@ const ApexChart = (props) => {
         height={350}
       />
     </div>
+    <span>Minutes</span>
+    </>
   );
 };
 

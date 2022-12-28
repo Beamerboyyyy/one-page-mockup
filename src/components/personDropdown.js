@@ -1,8 +1,12 @@
 import React from "react";
 import person1 from "../static/person1.jpg"
 
+
+
 export default function PersonDropdown({args}) {
-    
+  function refresh(){
+    window.location.reload();
+  }    
 
   return (
     <>
@@ -10,7 +14,7 @@ export default function PersonDropdown({args}) {
       <button
         id="dropdownHelperButton"
         data-dropdown-toggle="dropdownHelper"
-        class="w-1/3 mr-2 text-white bg-gray-900  hover:bg-gray-700 mt-2 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+        class="w-1/3 mr-8 text-white bg-gray-900  hover:bg-gray-700 mt-2 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
         type="button"
       >
         <span className="w-full font-semibold text-base">Select Person</span> 
@@ -44,10 +48,9 @@ export default function PersonDropdown({args}) {
                 <div class="flex justify-start items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600 space-x-5">
                   <div class="h-full">
                     <input
-                      id="helper-checkbox-1"
-                      aria-describedby="helper-checkbox-text-1"
-                      type="checkbox"
-                      value=""
+                      onClick={refresh}
+                      // checked="checked"
+                      id="helper-radio-4" name="helper-radio" type="radio" value=""
                       class="w-4 h-4 text-gray-600 bg-gray-100 rounded border-gray-300 focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                     />
                   </div>

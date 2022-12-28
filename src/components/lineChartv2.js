@@ -3,26 +3,19 @@ import { Chart } from "react-google-charts";
 
 export const data = [
   ["x", "Performance"],
-  [new Date("2015-01-01"), 0],
-  [new Date("2015-01-08"), 10],
-  [new Date("2015-01-15"), 23],
-  [new Date("2015-01-22"), 17],
-  [new Date("2015-01-29"), 18],
-  [new Date("2015-02-06"), 9],
-  [new Date("2015-02-13"), 11],
-  [new Date("2015-02-19"), 27],
+  [, 82],
+  [, 84],
+  [, 93],
+  [, 89],
+  [, 81],
 ];
 
 export const options = {
   legend: {position: 'none'},
+
   hAxis: {
     title: "",
-    format: "yyyy-MM-dd",
-    baselineColor: '#fff',
-    gridlineColor: '#fff',
-    textPosition: 'none'
-    
-    
+    // format: "yyyy-MM-dd",
   },
   vAxis: {
     title: "Performance",
@@ -34,7 +27,7 @@ export const options = {
   pointsVisible: true
 };
 
-export function LineChart() {
+export  function LineChartv2() {
   return (
     <Chart
       
@@ -44,8 +37,9 @@ export function LineChart() {
       data={data}
       options={options}
       width="100%"
-      height="400px"
-      legendToggle
+      height="200px"
+      
+      
     />
   );
 }

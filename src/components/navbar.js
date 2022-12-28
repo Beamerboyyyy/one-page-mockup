@@ -29,12 +29,12 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         <div className="mx-7">
           <div
-            className={`text-4xl hidden 2xl:block  uppercase font-black ${
+            className={`text-4xl  uppercase font-black ${
               sticky ? "text-black" : "text-white"
             }`}
           >
-            <div className="w-64 h-32   border-cyan-600 rounded-bl-full rounded-br-full bg-white justify-center flex items-center">
-             <img src={logo} className={`h-10 w-25 bg-white mb-10 `} />
+            <div className="w-[0px] h-32  border-cyan-600 rounded-bl-full rounded-br-full 2xl:w-64 bg-white justify-center flex items-center">
+             <img src={logo} className={`h-10 w-25  2xl:w-25  mb-10`} />
              </div>
           </div>
         </div>
