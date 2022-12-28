@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    // colors: {
+    //   // 'custom-cyan': '#0e7490',
+    // },
     extend: {
       animation: {
         cursor: 'cursor .6s linear infinite alternate',
@@ -26,6 +29,7 @@ module.exports = {
       fontFamily:{
         Poppins: "Poppins",
       }
+
     },
   },
   plugins: [

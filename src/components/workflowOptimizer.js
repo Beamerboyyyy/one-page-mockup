@@ -1,6 +1,7 @@
 import React from "react";
 import PersonDropdown from "./personDropdown";
 import person1 from "../static/person1.jpg";
+import {BiRightArrow,BiLeftArrow} from "react-icons/bi";
 // import SortBox from "./sortBox";
 
 function getRandomItem(set) {
@@ -57,12 +58,12 @@ export default function Workflowoptimizer() {
   ];
   var color = [
     { color: "red-700" },
-    { color: "blue-700" },
-    { color: "orange-700" },
+    { color: "blue-500" },
+    { color: "pink-700" },
     { color: "purple-700" },
     { color: "yellow-700" },
     { color: "green-700" },
-    { color: "cyan-700" },
+    { color: "green-500" },
     { color: null },
   ];
 
@@ -117,13 +118,16 @@ export default function Workflowoptimizer() {
                 <PersonDropdown args={data} />
               </div>
               <div className="w-full h-[90%]  border-t-2 border-gray-600 rounded-lg mt-4 flex-col flex items-center justify-start mb-2">
-                <div className="w-[95%] mt-2 border-2 border-gray-400 h-[60px] rounded-md flex">
+                <div className="w-[99%] mt-2 border-2 border-gray-900 h-[60px] rounded-md flex">
                   {/* <div className="bg-gray-900 border-r-2 border-gray-400 w-[20%] flex justify-center items-center">
                     <span className="text-xl font-bold uppercase ">
                       Employees
                     </span>
                   </div> */}
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className=" border-black w-[2%]  bg-gray-900 flex items-center justify-center">
+                    <BiLeftArrow className=" hover:scale-125"/>
+                  </div>
+                  <div className="bg-gray-900  border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Mon
                       <br />
@@ -133,7 +137,7 @@ export default function Workflowoptimizer() {
                       <span className=" h-full w-4 mt-1">th</span>
                     </div>
                   </div>
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Tue
                       <br />
@@ -144,7 +148,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Wed
                       <br />
@@ -155,7 +159,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Thu
                       <br />
@@ -166,7 +170,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Fri
                       <br />
@@ -177,7 +181,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Sat
                       <br />
@@ -188,7 +192,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-900 border-r-2 border-gray-400 w-[14.5%] flex flex-col leading-none items-center">
+                  <div className="bg-gray-900 border-gray-400 w-[14.5%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
                       Sun
                       <br />
@@ -198,7 +202,9 @@ export default function Workflowoptimizer() {
                       <span className=" h-full w-4 mt-1">rd</span>
                     </div>
                   </div>
-
+                  <div className=" border-black w-[2%]  bg-gray-900 flex items-center justify-center">
+                    <BiRightArrow className=" hover:scale-125"/>
+                  </div>
                   {/* <div className="bg-gray-900 border-r-2 border-gray-400 w-[10%] flex justify-center items-center"><span>Mon 16</span></div> */}
                 </div>
                 {data?.map((instance, i) => {
@@ -212,7 +218,7 @@ export default function Workflowoptimizer() {
                   return (
                     <div
                       key={i}
-                      className="w-[95%]  mt-2 border-2  h-[63.6px] rounded-md flex"
+                      className="w-[95%]  mt-2   h-[63.6px] rounded-md flex"
                     >
                       {/* <div className="border-r-2 w-[20%]">
                       <div className="flex items-center justify-start h-full">
