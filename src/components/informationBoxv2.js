@@ -67,7 +67,7 @@ export default function InformationBox() {
                     </div>
                     <div class="mr-4 p-3 text-center">
                       <span class="text-xl font-bold block  tracking-wide text-gray-600">
-                        Ford-F1 50
+                        Ford F-150
                       </span>
                       <span class="text-sm text-gray-400">
                         Best Performance Model

@@ -15,7 +15,7 @@ export default function WorkerPerformanceMetrics() {
             <label className="m-2 text-xl font-semibold text-white">
               Select Worker
             </label>
-            <DropdownComponent args={["Worker 1", "Worker 2", "Worker 3"]} />
+            <DropdownComponent args={["Peter Parker", "Adams Gilchrist", "Sam Curren"]} />
           </div>
           <div className="pt-6 bg-white justify-center items-center border-white-200 rounded-lg mx-auto">
             <InformationBox />
