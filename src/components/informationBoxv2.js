@@ -25,7 +25,7 @@ export default function InformationBox() {
                     <GaugeChart
                       className="flex items-center justify-center"
                       colors={["#4B5563"]}
-                      percent={0.83}
+                      percent={0.87}
                       nrOfLevels={1}
                       textColor="none"
                       needleBaseColor="#4B5563"
@@ -36,7 +36,7 @@ export default function InformationBox() {
                       arcPadding={0}
                     />
                     <span className="-mt-1 ml-[2.2px] -pt-4 leading-none">
-                      83%
+                      87%
                       <br />
                     </span>
                     Performance

@@ -1,17 +1,25 @@
 import React from "react";
 import { Chart } from "react-google-charts";
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 export const data = [
   ["x", "Performance"],
-  [new Date("2015-01-01"), 0],
-  [new Date("2015-01-08"), 10],
-  [new Date("2015-01-15"), 23],
-  [new Date("2015-01-22"), 17],
-  [new Date("2015-01-29"), 18],
-  [new Date("2015-02-06"), 9],
-  [new Date("2015-02-13"), 11],
-  [new Date("2015-02-19"), 27],
+
 ];
+var prevVal=getRandomInt(85,90);
+for (let index = 0; index < 30; index++) {
+  var val=getRandomInt(85,90);
+  while((val==prevVal)){
+    var val=getRandomInt(85,90);
+  }
+  data.push([,val])
+  
+  prevVal=val;
+}
 
 export const options = {
   legend: {position: 'none'},
@@ -26,7 +34,8 @@ export const options = {
   },
   vAxis: {
     title: "Performance",
-    format:'0'
+    format:'0',
+    ticks:[0,10,20,30,40,50,60,70,80,90,100]
   },
   series: {
     1: { curveType: "function" },

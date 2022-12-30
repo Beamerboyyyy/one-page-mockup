@@ -8,6 +8,11 @@ function getRandomItem(set) {
   let items = Array.from(set);
   return items[Math.floor(Math.random() * items.length)];
 }
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 export default function Workflowoptimizer() {
   var tasks = [
@@ -49,12 +54,12 @@ export default function Workflowoptimizer() {
   ];
   var task = [
     { task: "Roof installation" },
-    { task: "Roof Welding" },
-    { task: "Roof Allocation" },
-    { task: "Inventory Check" },
-    { task: "Roof Measurement Check" },
-    { task: "Roof Drilling" },
-    { task: "Roof Research" },
+    // { task: "Roof Welding" },
+    // { task: "Roof Allocation" },
+    // { task: "Inventory Check" },
+    // { task: "Roof Measurement Check" },
+    // { task: "Roof Drilling" },
+    // { task: "Roof Inspection" },
   ];
   var color = [
     { color: "red-700" },
