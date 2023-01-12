@@ -34,12 +34,14 @@ export default function WorkshopFloor() {
   return (
     <section id="workshopfloor" className="py-10 text-white mt-4 ">
       <div className="text-center mt-8">
-        <h3 className="text-4xl border-t-2 border-white pt-2 font-semibold">
-          Workshop Floor
-        </h3>
-        <div className=" flex flex-col mt-10 bg-gray-800 rounded-lg  max-w-6xl mx-auto h-fit justify-center items-center">
-          <div className="flex m-4 font-display text-start justify-center space-x-2 h-fit w-full">
-            <label className="m-2 text-xl font-semibold text-white leading-none">
+        <div className="flex justify-center items-center">
+          <h3 className="link link-underline link-underline-black text-4xl font-black border-t-2 border-white pt-2 text-black">
+            Workshop Floor
+          </h3>
+        </div>
+        <div className=" flex flex-col mt-10 bg-customBlue rounded-lg  max-w-7xl mx-auto h-fit justify-center items-center border-2 border-customDarkBlue">
+          <div className="flex m-4 font-display text-start text-customDarkBlue justify-center space-x-2 h-full w-full">
+            <label className="m-2 text-xl font-semibold text-customDarkBlue leading-none">
               Select Workshop
             </label>
             <DropdownComponent
@@ -51,28 +53,31 @@ export default function WorkshopFloor() {
               ]}
             />
           </div>
-          <div className="w-full flex h-screen">
-            <div className="h-full w-2/3 pt-3 ml-2 flex flex-col ">
-              <div className="h-2/3 w-full ">
-                <video
-                  src={video1}
-                  type="video/mp4"
-                  loop
-                  autoPlay
-                  muted
-                  controls={false}
-                  className="border-4 w-full bg-black border-gray-900 rounded-lg h-full"
-                ></video>
-                <div className=" mb-4 h-1/4">
-                  <h1 className="custom-text text-2xl mt-2 flex p-2 font-semibold underline text-white">
-                    Car Model:
-                  </h1>
-                  <div className="pt-2 w-full">
-                    <ul className="list-disc ml-8">
-                      <li className="custom p-2 h-fit text-xl text-start text-white flex">
-                        <span className="">Detecting Car Model</span>
-                        <div className="flex">
-                          {/* <div class="lds-ring hideMeAfter5Seconds ml-1 -mt-0.5">
+          <div className="w-full flex-row h-full">
+            <div className="h-full w-full pt-3 ml-2 ">
+              <div className="flex">
+                <div className="h-fit w-1/2">
+                  <div className="bg-black w-full flex items-center justify-center rounded-lg">
+                  <video
+                    src={video1}
+                    type="video/mp4"
+                    loop
+                    autoPlay
+                    muted
+                    controls={false}
+                    className="border-4 bg-black border-gray-900 rounded-lg w-[300px] h-fit"
+                  ></video>
+                  </div>
+                  <div className=" mb-4 h-1/4">
+              <h1 className="custom-text text-2xl mt-2 flex p-2 font-semibold underline text-customDarkBlue">
+                Car Model:
+              </h1>
+              <div className="pt-2 w-full">
+                <ul className="list-disc ml-8">
+                  <li className="custom p-2 h-fit text-xl text-start text-customDarkBlue flex">
+                    <span className="">Detecting Car Model</span>
+                    <div className="flex">
+                      {/* <div class="lds-ring hideMeAfter5Seconds ml-1 -mt-0.5">
                           <div></div>
                           <div></div>
                           <div></div>
@@ -81,34 +86,38 @@ export default function WorkshopFloor() {
                         <span className="ml-1 showMe text-xl font-black">
                           &#10003;
                         </span> */}
-                        </div>
-                      </li>
-                      <li className="custom p-2 h-fit text-xl text-start text-white flex">
-                        <span className="">Calculating template placement</span>
-                        <div className="flex"></div>
-                      </li>
-                      <li className="custom p-2 h-fit  text-xl text-start text-white flex">
-                        <span className="">Overlaying template placement</span>
-                        <div className="flex"></div>
-                      </li>
-                      <li className="custom p-2 h-fit  text-xl text-start text-white flex">
-                        <span className="">Fetching placement measurement</span>
-                        <div className="flex"></div>
-                      </li>
-                      <li className="custom p-2 h-fit  text-xl text-start text-white flex">
-                        <span className="">
-                          Overlaying template placement measurement
-                        </span>
-                        <div className="flex"></div>
-                      </li>
-                    </ul>
-                  </div>
+                    </div>
+                  </li>
+                  <li className="custom p-2 h-fit text-xl text-start text-customDarkBlue flex">
+                    <span className="">Calculating template placement</span>
+                    <div className="flex"></div>
+                  </li>
+                  <li className="custom p-2 h-fit  text-xl text-start text-customDarkBlue flex">
+                    <span className="">Overlaying template placement</span>
+                    <div className="flex"></div>
+                  </li>
+                  <li className="custom p-2 h-fit  text-xl text-start text-customDarkBlue flex">
+                    <span className="">Fetching placement measurement</span>
+                    <div className="flex"></div>
+                  </li>
+                  <li className="custom p-2 h-fit  text-xl text-start text-customDarkBlue flex">
+                    <span className="">
+                      Overlaying template placement measurement
+                    </span>
+                    <div className="flex"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+                </div>
+                <div className="flex justify-end h-fit w-1/2">
+                <div className="w-fit mr-4 pt-6 mb-2 bg-white justify-center  border-white-200 rounded-lg h-fit">
+                  <InformationBoxv2 />
+                </div>
                 </div>
               </div>
             </div>
-            <div className="w-1/3 m-3 pt-6 bg-white justify-center items-center border-white-200 rounded-lg h-11/12">
-              <InformationBoxv2 />
-            </div>
+            
           </div>
         </div>
       </div>

@@ -85,22 +85,24 @@ export default function Workflowoptimizer() {
   return (
     <section id="workflowoptimizer" className="py-10 text-white mt-4 ">
       <div className="text-center mt-8 h-fit">
-        <h3 className="text-4xl font-semibold border-t-2 border-white pt-2">
+        <div className="flex justify-center items-center">
+        <h3 className="link link-underline link-underline-black text-4xl font-black border-t-2 border-white pt-2 text-black">
           Workflow Optimizer
         </h3>
-        <div className="flex justify-center items-center w-full">
-          <div className="w-full h-1/2 flex mb-10 mt-10  rounded-lg  m-20 ">
-            <div className="w-1/4 h-full border-2 border-gray-900 rounded-lg bg-gray-800">
-              <h3 className="m-4 pb-2 text-xl font-semibold border-b-2 hover:text-2xl duration-100 cursor-pointer">
+        </div>
+        <div className="bg-customBlue mt-10 mx-auto max-w-7xl rounded-lg border-2 border-customDarkBlue">
+          <div className="w-full h-1/2 flex mb-10 mt-10  rounded-lg border-2 ">
+            <div className="w-1/4 h-full rounded-l-lg text-customDarkBlue bg-customBlue  border-customDarkBlue">
+              <h3 className="m-4 pb-2 text-xl font-black border-b-2 hover:text-2xl duration-100 cursor-pointer">
                 Expected Upcoming Tasks
               </h3>
               <div className="mb-2">
                 <table className="mx-auto gap-3">
                   <tr className="">
-                    <th className="text-lg text-gray-300 font-black p-2 border-b-2 border-r-2 border-white">
+                    <th className="text-lg text-customDarkBlue font-black p-2 border-b-2 border-r-2 border-customDarkBlue">
                       Car Company
                     </th>
-                    <th className="text-lg text-gray-300 font-black p-2 border-b-2 border-white">
+                    <th className="text-lg text-customDarkBlue font-black p-2 border-b-2 border-customDarkBlue">
                       Quantity
                     </th>
                   </tr>
@@ -109,16 +111,16 @@ export default function Workflowoptimizer() {
                       key={i}
                       className="hover:text-xl hover:text-gray-600 hover:font-bold duration-100 cursor-pointer"
                     >
-                      <td className="p-1 border-r-2 border-l-2 border-white">
+                      <td className="p-1 border-r-2 border-l-2 border-customDarkBlue">
                         {task?.name}
                       </td>
-                      <td className="border-r-2">{task?.order}</td>
+                      <td className="border-r-2 border-l-2 border-customDarkBlue">{task?.order}</td>
                     </tr>
                   ))}
                 </table>
               </div>
             </div>
-            <div className="w-3/4 h-full border-2 border-gray-900 rounded-lg bg-gray-800">
+            <div className="w-3/4 h-full border-2  rounded-lg bg-customBlue">
               <div className="w-full h-[10%] flex flex-row justify-end">
                 <PersonDropdown args={data} />
               </div>
@@ -248,18 +250,16 @@ export default function Workflowoptimizer() {
                       {rand_col_1 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_1} w-[14.28%] bg-${rand_col_1} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 text-black hover:text-white font-bold border-r-2 border-${rand_col_1} w-[14.28%] bg-${rand_col_1} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]   font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px]  hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px]  leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -267,7 +267,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -277,18 +277,16 @@ export default function Workflowoptimizer() {
                       {rand_col_2 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_2} w-[14.28%] bg-${rand_col_2} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 text-black hover:text-white font-bold border-r-2 border-${rand_col_2} w-[14.28%] bg-${rand_col_2} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -296,7 +294,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -305,18 +303,16 @@ export default function Workflowoptimizer() {
                       {rand_col_3 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_3} w-[14.28%] bg-${rand_col_3} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 border-r-2 text-black hover:text-white font-bold border-${rand_col_3} w-[14.28%] bg-${rand_col_3} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -324,7 +320,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -333,18 +329,16 @@ export default function Workflowoptimizer() {
                       {rand_col_4 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_4} w-[14.28%] bg-${rand_col_4} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 border-r-2 text-black hover:text-white font-bold border-${rand_col_4} w-[14.28%] bg-${rand_col_4} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -352,7 +346,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -361,18 +355,16 @@ export default function Workflowoptimizer() {
                       {rand_col_5 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_5} w-[14.28%] bg-${rand_col_5} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 border-r-2 text-black hover:text-white font-bold border-${rand_col_5} w-[14.28%] bg-${rand_col_5} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -380,7 +372,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -389,18 +381,16 @@ export default function Workflowoptimizer() {
                       {rand_col_6 ? (
                         <>
                           <div
-                            className={`mr-0.5 border-l-2 border-r-2 border-${rand_col_6} w-[14.28%] bg-${rand_col_6} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={`mr-0.5 border-l-2 border-r-2 text-black hover:text-white font-bold border-${rand_col_6} w-[14.28%] bg-${rand_col_6} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
                           </div>
                         </>
                       ) : (
@@ -408,7 +398,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>
@@ -417,18 +407,17 @@ export default function Workflowoptimizer() {
                       {rand_col_7 ? (
                         <>
                           <div
-                            className={` border-l-2 border-r-2 border-${rand_col_7} w-[14.28%] bg-${rand_col_7} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
+                            className={` border-l-2 border-r-2 text-black hover:text-white font-bold border-${rand_col_7} w-[14.28%] bg-${rand_col_7} rounded-tr-3xl rounded-tl-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
-                              {time[i].time}
-                            </span>
-                            <span className="mt-1 text-[12px] hover:font-bold cursor-pointer flex flex-col leading-none items-center justify-center">
-                              &#x2022; {getRandomItem(schedule).car}
-                              <span className="text-[10px] text-center leading-none">
-                                <br />
-                                {getRandomItem(task).task}
+                            <div>
+                              <span className="mt-0.5 xl:text-[10px] text-[8px]  font-bold leading-none">
+                                {time[i].time}
                               </span>
-                            </span>
+                              <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
+                                &#x2022; {getRandomItem(schedule).car}</span>
+                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                            </div>
+
                           </div>
                         </>
                       ) : (
@@ -436,7 +425,7 @@ export default function Workflowoptimizer() {
                           <div
                             className={`w-[14.28%]  rounded-tr-3xl flex flex-col items-center`}
                           >
-                            <span className="mt-1 text-[10px]">
+                            <span className="mt-1 text-[10px] text-black font-bold">
                               {time[i].time}
                             </span>
                           </div>

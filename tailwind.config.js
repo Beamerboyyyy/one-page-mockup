@@ -6,6 +6,11 @@ module.exports = {
     //   // 'custom-cyan': '#0e7490',
     // },
     extend: {
+      colors: {
+        'customBlue': '#e1e6e9',
+        'customDarkBlue':'#17262f',
+        'customCyan':'#41bdac'
+      },
       animation: {
         cursor: 'cursor .6s linear infinite alternate',
         type: 'type 2s ease-out 1s 5 normal both',
@@ -28,6 +33,8 @@ module.exports = {
       },
       fontFamily:{
         Poppins: "Poppins",
+        Manrope: "Manrope",
+
       }
 
     },

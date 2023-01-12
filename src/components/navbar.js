@@ -23,29 +23,29 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
-        sticky ? "bg-white/60  text-gray-900" : "text-white"
+        sticky ? "bg-black/60  text-white" : "text-white"
       }`}
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
           <div
             className={`text-4xl  uppercase font-black ${
-              sticky ? "text-black" : "text-white"
+              sticky ? "text-white" : "text-white"
             }`}
           >
-            <div className="w-[0px] h-32  border-cyan-600 rounded-bl-full rounded-br-full 2xl:w-64 bg-white justify-center flex items-center">
+            <div className="w-[0px] h-40  border-cyan-600 rounded-bl-full rounded-br-full 2xl:w-80 bg-black justify-center flex items-center">
              <img src={logo} className={`h-10 w-25  2xl:w-25  mb-10`} />
              </div>
           </div>
         </div>
         <div
           className={` ${
-            sticky ? "md:bg-white/0 bg-white" : "bg-white"
-          } fixed top-0 right-0 text-gray-900 md:block hidden px-7 py-2 font-bold rounded-bl-full`}
+            sticky ? "md:bg-black/0 bg-black" : "bg-black"
+          } fixed top-0 right-0 text-white md:block hidden px-7 py-2 font-bold rounded-bl-full`}
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-cyan-600">
+              <li key={i} className="px-6 hover:text-customCyan">
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
@@ -54,13 +54,13 @@ export default function Navbar() {
         <div
           onClick={() => setOpen(!open)}
           className={`z-[999] ${
-            open ? "text-gray-900" : "text-gray-100"
+            open ? "text-customCyan" : "text-gray-100"
           } m-5 text-3xl md:hidden`}
         >
-          <ion-icon name="menu"></ion-icon>
+          <ion-icon name="menu" className='bg-black'></ion-icon>
         </div>
         <div
-          className={`md:hidden text-gray-900 absolute w-2/3 h-screen px-7 py-2 font-bold bg-white top-0 duration-300 ${
+          className={`lg:hidden text-gray-900 absolute w-2/3 h-screen px-7 py-2 font-bold bg-white border-customCyan border-2 top-0 duration-300 ${
             open ? "right-0" : "right-[-100%]"
           }`}
         >

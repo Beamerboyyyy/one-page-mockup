@@ -8,9 +8,9 @@ export default function LoginBox() {
   }
 
   return (
-    <div className="relative flex flex-col justify-center h-1/2 overflow-hidden">
+    <div className="relative flex flex-col justify-center h-1/2 overflow-hidden ">
       <div className="w-full p-6 m-auto rounded-md shadow-xl lg:max-w-xl">
-        <h1 className="text-4xl font-bold text-center text-cyan-600 ">
+        <h1 className="text-4xl font-bold text-center text-white ">
           Sign in
         </h1>
         
@@ -47,14 +47,14 @@ export default function LoginBox() {
               // onClick={goToMain}
               
               type='submit'
-              className="w-full px-4 py-2 ease-in  duration-30  bg-cyan-600 tracking-wide text-gray-900 font-black transition-colors0 transform  rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+              className="w-full px-4 py-2 ease-in  duration-30  bg-customCyan tracking-wide text-gray-900 font-bold transition-colors0 transform  rounded-md hover:bg-gray-600 hover:text-white focus:outline-none focus:bg-blue-600"
             >
               Login
             </button>
           </div>
         </form>
         <div className="relative flex items-center justify-center w-full mt-6 border">
-          <div className="absolute px-5 bg-cyan-600 text-gray-900 font-semibold w-fit rounded-xl">Or</div>
+          <div className="absolute px-5 bg-customCyan text-gray-900 font-semibold w-fit rounded-xl">Or</div>
         </div>
         <div className="flex mt-4 gap-x-2 w-full">
           
