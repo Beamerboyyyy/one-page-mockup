@@ -11,6 +11,7 @@ export default function LoginPage() {
     <div className="">
         <LoginNavbar/>
       <div>
+      <title>Login | Portal</title>
         <div className="mx-auto mt-16 ">
           <div className="flex flex-col items-center justify-center max-w-screen">
             <div className="p-3 mt-12 bg-black border-b-2 w-1/2 items-center justify-center flex flex-col border-2 border-customDarkBlue rounded-xl">

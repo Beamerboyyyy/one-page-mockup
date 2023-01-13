@@ -21,11 +21,13 @@ export default function Navbar() {
     });
   });
   return (
+    
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
         sticky ? "bg-black/60  text-white" : "text-white"
       }`}
     >
+      <title>Dashboard | Portal</title>
       <div className="flex items-center justify-between">
         <div className="mx-7">
           <div
