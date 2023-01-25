@@ -1,12 +1,21 @@
 import React from "react";
-import image from "../static/image-second.jpg"
-import img1 from "../static/img1.jpg"
-import img2 from "../static/img2.jpg"
-import img3 from "../static/img3.jpg"
+import image from "../static/image-second.jpg";
+import img1 from "../static/img1.jpg";
+import img2 from "../static/img2.jpg";
+import img3 from "../static/img3.jpg";
+// import map-pin from "@heroicons"
+import {
+  MapPinIcon,
+  CurrencyDollarIcon,
+  StarIcon,
+} from "@heroicons/react/24/solid";
 import "../static/home.css";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function About() {
-   const cv=null;
+  const cv = null;
   const info = [
     { text: "Founded on", count: "2006" },
     { text: "Email", count: "hello@crosswing.com" },
@@ -15,53 +24,82 @@ export default function About() {
   return (
     <section id="home" className="py-10 text-white mt-12">
       <div className="text-center mt-16">
-      <div className="flex justify-center items-center">
-        <h3 className="link link-underline link-underline-black    text-4xl font-black border-t-2 border-white pt-2 text-black mb-2">
-          Home
-        </h3>
+        <div className="flex justify-center items-center">
+          <h3 className="link link-underline link-underline-black    text-4xl font-black border-t-2 border-white pt-2 text-[#CE2026] mb-2">
+            Home
+          </h3>
         </div>
         <div className="bg-customBlue mx-auto max-w-7xl rounded-lg border-2 border-customDarkBlue">
-        <div className="flex md:gap-6 gap-12  w-full ">
-          <div className="w-1/2 md:mt-0 mt-6 flex justify-end items-center  ">
-              <h3 className="font-black lg:text-3xl text-2xl text-gray-800 text-end w-11/12 ">A software engineering services company that redefines the state of the art</h3>
+          {/* <div className="flex md:gap-6 gap-12 space-y-6 tracking-wider mt-2 w-full justify-center font-bold text-customDarkBlue text-4xl ">
+            Our Mission
+          </div> */}
+          <div className="flex md:flex-row flex-col md:gap-6 gap-12 px-2 justify-center mt-5 ext-2xl text-start font-black text-[#CE2026]  w-full pb-5 mx-2">
+            WE WANT TO BE THE AUTO ACCESSORY AND INSTALLATION FACILITY YOU TURN
+            TO FOR ALL YOUR AUTOMOTIVE NEEDS
           </div>
-          <div className="mr-2 mt-2 mb-2  w-1/2">
-            <div className="text-customDarkBlue mt-10 border-l-2 border-black pl-2">
-              <h1 className="text-justify text-md lg:text-lg text-md leading-7 font-bold w-11/12 mb-2 ">
-              Transform your business with Foxfire Labs. Our software engineering experts can help you reimagine and modernize existing technology systems, as well as launch exciting new products.
-              </h1>
-              <p className="text-start lg:text-md text-sm w-11/12">
-              With our focus on quality and customer care, you can trust us for a comprehensive solution that boosts efficiency and gives you a competitive edge.
-              </p>
-
+          <div className="flex px-2 mt-5 gap-2 w-full pb-5 mx-2">
+            <div className="text-customDarkBlue flex justify-center w-full text-md">
+              For the over 40 years we’ve been in business, we have been
+              striving to provide our clients the best quality service possible
+              to gain their full satisfaction. And they’ve shown their
+              appreciation by coming back to us repeatedly.
             </div>
           </div>
-        </div>
-        <div className="flex md:flex-row flex-col md:gap-6 gap-12 px-2  mt-5  w-full pb-5 mx-2">
-          <h2 className="text-4xl text-start font-black text-customDarkBlue">We've been solving challenges for businesses since 2006 through the use of cutting-edge solutions.</h2>
-        </div>
-        <div className="flex px-2 mt-5 gap-2 w-full pb-5 mx-2">
-            <div className="w-1/3  mr-4">
-              <img src={img1} className='rounded-lg hover:scale-105 cursor-pointer duration-100 mb-4 '>
-              </img>
-              <span className="link link-underline link-underline-black text-customDarkBlue text-xl font-black cursor-pointer ">Improving Chemical Manufacturing with AI and Robotic Automation</span>
+          <div className="flex md:flex-row flex-col md:gap-6 gap-12 px-2 justify-center mt-5 ext-2xl text-start font-black text-[#CE2026]  w-full pb-5 mx-2">
+            WE WANT NOTHING MORE THAN TO KEEP YOU AND YOUR VEHICLE SAFE AND
+            ACCESSORIZED
+          </div>
+          <div className="flex px-2 mt-5 gap-2 w-full pb-5 mx-2">
+            <div className="text-customDarkBlue flex justify-center w-full text-md">
+              Whether you own an import, a domestic, or a high performance
+              exotic car, we’re the place to take your car for all your
+              accessory needs. We pride ourselves on being able to provide the
+              best quality products and services. We have been leaders and
+              experts in our industry for over 40 years in Canada.
             </div>
-            <div className="w-1/3  mr-4">
-              <img src={img2} className='rounded-lg hover:scale-105 cursor-pointer duration-100 mb-4'>
-              </img>
-              <span className="link link-underline link-underline-black text-customDarkBlue text-xl font-black cursor-pointer ">Optimizing Packaging Operations with Vision-Based Robotics</span>
+          </div>
+          <div className="flex px-2 mt-5 gap-2 w-full justify-evenly pb-5 mx-2 text-customDarkBlue">
+            <div className="flex flex-col justify-center align-bottom">
+              <div className="flex justify-center ">
+                <LocationOnIcon className="text-[#CE2026] !w-12 !h-12" />
+              </div>
+              <div className="text-[#CE2026] font-black">
+                ALWAYS OPEN FOR YOU
+              </div>
+              <div className="text-customDarkBlue flex justify-center w-full text-md">
+                Get to know our experienced sales and installation staff.
+                They’ve got tools, skills, and a desire to help. Come see why no
+                shop is as quick, qualified, or convenient as we are.
+              </div>
             </div>
-            <div className="w-1/3  mr-4">
-              <img src={img3} className='rounded-lg hover:scale-105 cursor-pointer duration-100 mb-4'>
-              </img>
-              <span className="link link-underline link-underline-black text-customDarkBlue text-xl font-black cursor-pointer ">Enhancing Workplace Safety & Training with AI & Computer Vision</span>
+            <div className="flex flex-col justify-center align-bottom">
+              <div className="flex justify-center ">
+                <AttachMoneyIcon className="text-[#CE2026] !w-12 !h-12" />
+              </div>
+              <div className="text-[#CE2026] font-black">
+                UNBEATABLE PRICE & SERVICE
+              </div>
+              <div className="text-customDarkBlue flex justify-center w-full text-md">
+                At ASC, we will strive to give you give you the best service at
+                the best possible price. Get a quote today!
+              </div>
             </div>
-            
-            
-        </div>
+            <div className="flex flex-col justify-center align-center">
+              <div className="flex justify-center ">
+                <StarBorderIcon className="text-[#CE2026] !w-12 !h-12" />
+              </div>
+              <div className="text-[#CE2026] font-black">
+                PROFESSIONALLY QUALIFIED & FACTORY CERTIFIED
+              </div>
+              <div className="text-customDarkBlue flex justify-center w-full text-md">
+                We’re a SEMA certified installation company with well trained
+                and experienced professionals. Trust us as your experts in
+                leather, sunroofs and all your vehicle accessory needs.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </section>
   );
 }

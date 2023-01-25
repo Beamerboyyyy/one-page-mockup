@@ -1,7 +1,7 @@
 import React from "react";
 import PersonDropdown from "./personDropdown";
 import person1 from "../static/person1.jpg";
-import {BiRightArrow,BiLeftArrow} from "react-icons/bi";
+import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 // import SortBox from "./sortBox";
 
 function getRandomItem(set) {
@@ -86,9 +86,9 @@ export default function Workflowoptimizer() {
     <section id="workflowoptimizer" className="py-10 text-white mt-4 ">
       <div className="text-center mt-8 h-fit">
         <div className="flex justify-center items-center">
-        <h3 className="link link-underline link-underline-black text-4xl font-black border-t-2 border-white pt-2 text-black">
-          Workflow Optimizer
-        </h3>
+          <h3 className="link link-underline link-underline-black text-4xl font-black border-t-2 border-white pt-2 text-[#CE2026]">
+            Workflow Optimizer
+          </h3>
         </div>
         <div className="bg-customBlue mt-10 mx-auto max-w-7xl rounded-lg border-2 border-customDarkBlue">
           <div className="w-full h-1/2 flex mb-10 mt-10  rounded-lg border-2 ">
@@ -114,7 +114,9 @@ export default function Workflowoptimizer() {
                       <td className="p-1 border-r-2 border-l-2 border-customDarkBlue">
                         {task?.name}
                       </td>
-                      <td className="border-r-2 border-l-2 border-customDarkBlue">{task?.order}</td>
+                      <td className="border-r-2 border-l-2 border-customDarkBlue">
+                        {task?.order}
+                      </td>
                     </tr>
                   ))}
                 </table>
@@ -132,7 +134,7 @@ export default function Workflowoptimizer() {
                     </span>
                   </div> */}
                   <div className=" border-black w-[2%]  bg-gray-900 flex items-center justify-center">
-                    <BiLeftArrow className=" hover:scale-125"/>
+                    <BiLeftArrow className=" hover:scale-125" />
                   </div>
                   <div className="bg-gray-900  border-gray-400 w-[14.28%] flex flex-col leading-none items-center">
                     <span className="leading-none text-sm mt-1">
@@ -210,7 +212,7 @@ export default function Workflowoptimizer() {
                     </div>
                   </div>
                   <div className=" border-black w-[2%]  bg-gray-900 flex items-center justify-center">
-                    <BiRightArrow className=" hover:scale-125"/>
+                    <BiRightArrow className=" hover:scale-125" />
                   </div>
                   {/* <div className="bg-gray-900 border-r-2 border-gray-400 w-[10%] flex justify-center items-center"><span>Mon 16</span></div> */}
                 </div>
@@ -257,8 +259,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px]  hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px]  leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px]  leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -284,8 +290,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -310,8 +320,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -336,8 +350,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -362,8 +380,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -388,8 +410,12 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
                           </div>
                         </>
@@ -414,10 +440,13 @@ export default function Workflowoptimizer() {
                                 {time[i].time}
                               </span>
                               <span className=" text-[8px] xl:text-[11px] hover:font-bold cursor-pointer flex flex-col leading-none">
-                                &#x2022; {getRandomItem(schedule).car}</span>
-                              <span className="text-[7px] xl:text-[10px] leading-none"> {getRandomItem(task).task}</span>                              
+                                &#x2022; {getRandomItem(schedule).car}
+                              </span>
+                              <span className="text-[7px] xl:text-[10px] leading-none">
+                                {" "}
+                                {getRandomItem(task).task}
+                              </span>
                             </div>
-
                           </div>
                         </>
                       ) : (
