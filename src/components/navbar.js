@@ -11,6 +11,7 @@ export default function Navbar() {
     { name: "Worker Performance Metrics ", link: "#workerperformancemetrics" },
     { name: "Workflow Optimizer", link: "#workflowoptimizer" },
     { name: "Demand Forecasting", link: "#demandforecasting" },
+    { name: "Dashboard", link: "/dashboard" },
   ];
 
   useEffect(() => {

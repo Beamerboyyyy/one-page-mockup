@@ -8,6 +8,11 @@ import WorkshopFloor from "./components/workshopFloor";
 import DemandForecasting from "./components/demandForecasting";
 import Footer from "./components/footer";
 import Workflowoptimizer from "./components/workflowOptimizer";
+// import Dashboard from "./components/Dashboard";
+// import { ThemeProvider } from "@material-tailwind/react";
+// import { MaterialTailwindControllerProvider } from "./context";
+// import Dashboard from "./layouts/dashboard";
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -26,6 +31,21 @@ function App() {
                 <Workflowoptimizer />
                 <DemandForecasting />
                 <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                {/* <Navbar /> */}
+                {/* <ThemeProvider>
+                  <MaterialTailwindControllerProvider> */}
+                {/* <Navbar /> */}
+                <Dashboard />
+                  {/* </MaterialTailwindControllerProvider>
+
+                </ThemeProvider> */}
               </>
             }
           />
