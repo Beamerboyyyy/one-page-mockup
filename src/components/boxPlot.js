@@ -1,38 +1,15 @@
+import { func } from "prop-types";
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const ApexChart = (props) => {
-  const [series, setSeries] = useState([
-    {
-      type: "boxPlot",
-      data: [
-        {
-          x: "Toyota",
-          y: [54, 66, 69, 75, 88],
-        },
-        {
-          x: "Ford",
-          y: [43, 65, 69, 76, 81],
-        },
-        {
-          x: "KIA",
-          y: [31, 39, 45, 51, 59],
-        },
-        {
-          x: "Honda",
-          y: [39, 46, 55, 65, 71],
-        },
-        {
-          x: "Hyundai",
-          y: [29, 31, 35, 39, 44],
-        },
-      ],
-    },
-  ]);
-  const [options, setOptions] = useState({
+
+export default function ApexChart ({args}){
+  console.log(args.boxPlotValue)
+  const options = {
 
     
     chart: {
+      id:args.id,
       type: "boxPlot",
       height: 350,
     },
@@ -52,13 +29,18 @@ const ApexChart = (props) => {
         },
       },
     },
-  });
+  };
   return (
     <>
     <div id="chart">
       <ReactApexChart
         options={options}
-        series={series}
+        series={[
+          {
+            type: "boxPlot",
+            data: args.boxPlotValue
+          },
+        ]}
         type="boxPlot"
         height={350}
       />
@@ -68,4 +50,4 @@ const ApexChart = (props) => {
   );
 };
 
-export default ApexChart;
+

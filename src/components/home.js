@@ -13,6 +13,7 @@ import "../static/home.css";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Dashboard from "../pages/Dashboard";
 
 export default function About() {
   const cv = null;
@@ -33,7 +34,8 @@ export default function About() {
           {/* <div className="flex md:gap-6 gap-12 space-y-6 tracking-wider mt-2 w-full justify-center font-bold text-customDarkBlue text-4xl ">
             Our Mission
           </div> */}
-          <div className="flex md:flex-row flex-col md:gap-6 gap-12 px-2 justify-center mt-5 ext-2xl text-start font-black text-[#CE2026]  w-full pb-5 mx-2">
+          <Dashboard />
+          {/* <div className="flex md:flex-row flex-col md:gap-6 gap-12 px-2 justify-center mt-5 ext-2xl text-start font-black text-[#CE2026]  w-full pb-5 mx-2">
             WE WANT TO BE THE AUTO ACCESSORY AND INSTALLATION FACILITY YOU TURN
             TO FOR ALL YOUR AUTOMOTIVE NEEDS
           </div>
@@ -97,7 +99,7 @@ export default function About() {
                 leather, sunroofs and all your vehicle accessory needs.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

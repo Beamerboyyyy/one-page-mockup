@@ -50,7 +50,7 @@ function BarChart01({
               parser: 'MM-DD-YYYY',
               unit: 'month',
               displayFormats: {
-                month: 'MMM YY',
+                month: 'MMM',
               },
             },
             grid: {
@@ -83,6 +83,7 @@ function BarChart01({
       plugins: [{
         id: 'htmlLegend',
         afterUpdate(c, args, options) {
+          console.log("C",c)
           const ul = legend.current;
           if (!ul) return;
           // Remove old legend items
@@ -91,6 +92,7 @@ function BarChart01({
           }
           // Reuse the built-in legendItems generator
           const items = c.options.plugins.legend.labels.generateLabels(c);
+          console.log(items)
           items.forEach((item) => {
             const li = document.createElement('li');
             li.style.marginRight = tailwindConfig().theme.margin[4];
@@ -128,8 +130,9 @@ function BarChart01({
             label.style.color = tailwindConfig().theme.colors.slate[500];
             label.style.fontSize = tailwindConfig().theme.fontSize.sm[0];
             label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight;
-            const theValue = c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0);
-            const valueText = document.createTextNode(formatValue(theValue));
+            const theValue = c.data.datasets[item.datasetIndex].cond? c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0) :  c.data.datasets[item.datasetIndex].text;
+            // const theValue = 2021
+            const valueText = document.createTextNode(theValue);
             const labelText = document.createTextNode(item.text);
             value.appendChild(valueText);
             label.appendChild(labelText);
