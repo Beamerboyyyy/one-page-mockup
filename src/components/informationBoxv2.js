@@ -45,11 +45,11 @@ export default function InformationBox() {
               </div>
               <div class="text-center  flex flex-col items-center justify-center">
                 <span class="text-2xl font-semibold leading-normal mb-1 text-blueGray-700">
-                  Peter Parker
+                Sam Davidson
                 </span>
                 <div class="text-sm leading-normal mt-0 mb-2 text-gray-800 font-bold uppercase">
                   <i class="fas fa-map-marker-alt mr-2 text-lg text-gray-800"></i>
-                  Los Angeles, California
+                  1883 Venture Place, Alberta
                 </div>
                 <div class="w-full h-fit text-center items-center justify-center flex">
                   <div class="flex flex-col justify-center py-4 lg:pt-4 pt-8 w-11/12">

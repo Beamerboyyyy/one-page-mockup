@@ -15,12 +15,12 @@ export const options = {
   is3D: true,
 };
 
-export default function PieChart() {
+export default function PieChart({args}) {
   return (
     <Chart
       className="rounded-lg"
       chartType="PieChart"
-      data={data}
+      data={args.pieValue}
       options={options}
       width={"100%"}
       height={"400px"}

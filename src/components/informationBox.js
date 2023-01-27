@@ -1,9 +1,9 @@
 import React from "react";
-import image from "../static/image.jpg";
+
 import GaugeChart from "react-gauge-chart";
 import { LineChartv2 } from "./lineChartv2";
 
-export default function InformationBox() {
+export default function InformationBox({args}){
   return (
     <div>
 
@@ -16,7 +16,7 @@ export default function InformationBox() {
                   <div class="flex justify-center items-center h-11/12">
                     <img
                       alt="..."
-                      src={image}
+                      src={args.pic}
                       class="shadow-xl rounded-full h-11/12 align-middle border-none w-1/2"
                     ></img>
                   </div>
@@ -26,7 +26,7 @@ export default function InformationBox() {
                     <GaugeChart
                       className="flex items-center justify-center"
                       colors={["#4B5563"]}
-                      percent={0.87}
+                      percent={args?.performance}
                       nrOfLevels={1}
                       textColor="none"
                       needleBaseColor="#4B5563"
@@ -36,42 +36,44 @@ export default function InformationBox() {
                       arcWidth={0.25}
                       arcPadding={0}
                     />
-                    <span className="-mt-1 ml-[2.2px] -pt-4 leading-none">87%<br/></span>
+                    <span className="-mt-1 ml-[2.2px] -pt-4 leading-none">{`${args?.performance*100}%`}<br/></span>
                     <span className="text-center ">Performance</span>
                   </div>
                 </div>
               </div>
               <div class="text-center  flex flex-col">
                 <span class="text-2xl font-semibold leading-normal mb-1 text-gray-700">
-                  Peter Parker
+                {args?.name}
                 </span>
                 <div class="text-sm leading-normal mt-0 mb-2 text-gray-700 font-bold uppercase">
                   <i class="fas fa-map-marker-alt mr-2 text-lg text-gray-700"></i>
-                  Los Angeles, California
+                  {args?.address}
                 </div>
                 <div class="w-full h-fit text-center items-center justify-center flex">
                   <div class="flex flex-wrap justify-center py-4 lg:pt-4 pt-8 w-11/12">
                   <div class="mr-4 p-3 text-center">
                       <span class="text-xl font-bold block e tracking-wide text-gray-600">
-                        Senior Technician
+                      {args?.designation}
                       </span>
                       <span class="text-sm text-gray-400">Designation</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
                       <span class="text-xl font-bold block  tracking-wide text-gray-600">
-                      579
+                      {args?.totalJobs}
+
                       </span>
                       <span class="text-sm text-gray-400">Jobs In 2022</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
                       <span class="text-xl font-bold block  tracking-wide text-gray-600">
-                        Ford F-150
+                      {args?.best}
+
                       </span>
                       <span class="text-sm text-gray-400">Best Performance Model</span>
                     </div>
                     <div class="mr-4 p-3 text-center">
                       <span class="text-xl font-bold block  tracking-wide text-gray-600">
-                        95%
+                      {args?.score}%
                       </span>
                       <span class="text-sm text-gray-400">Score for Current Job</span>
                     </div>
@@ -80,6 +82,9 @@ export default function InformationBox() {
                     </div> */}
                     
                   </div>
+                </div>
+                <div className="w-full border-black text-xl font-bold block e tracking-wide text-gray-600 ">
+                    {args?.desc}
                 </div>
               </div>
             </div>
