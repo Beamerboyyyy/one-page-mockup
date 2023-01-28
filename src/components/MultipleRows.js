@@ -48,7 +48,7 @@ const MultipleRows = ({ datas }) => {
   return (
     <div className={" grid-rows-24 container border-2 grid "}>
       <div
-        className={`  h-[60px] rounded-md row-span-3 grid grid-cols-9  text-white mb-[2px]`}
+        className={`  h-[60px] rounded-md row-span-3 grid grid-cols-9 gap-2  text-white mb-[2px]`}
         id="date"
       >
         <div className=" w-[150px]  flex flex-col items-center justify-center"></div>
@@ -65,8 +65,8 @@ const MultipleRows = ({ datas }) => {
           key={row.id}
           className={
             row.cond
-              ? `  h-[60px] rounded-md grid grid-cols-9  text-white`
-              : `grid grid-cols-9  row-span-3 h-[80px] mt-[1px] `
+              ? `  h-[60px] rounded-md grid grid-cols-9 gap-2 text-white`
+              : `grid grid-cols-9  row-span-3 h-[80px] gap-2 mt-[1px] `
           }
           id={row.cond ? "main" : ""}
         >
