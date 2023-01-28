@@ -59,16 +59,17 @@ function App() {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
+            className="rounded-lg !text-gray-900  border-gray-900 bg-opacity-30 bg-gray-900 "
           >
-            <DialogTitle id="alert-dialog-title">
+            <DialogTitle id="alert-dialog-title" className="text-white bg-gray-900  !font-bold underline">
               {"Slot Description"}
             </DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
+            <DialogContent className="bg-gray-900">
+              <DialogContentText id="alert-dialog-description" className="!text-white bg-gray-900">
                 {state.event}
               </DialogContentText>
             </DialogContent>
-            <DialogActions>
+            <DialogActions className="bg-gray-900 ">
               <Button onClick={handleClose}>Close</Button>
             </DialogActions>
           </Dialog>
